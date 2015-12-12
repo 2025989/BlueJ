@@ -47,7 +47,7 @@ public class TeamTest
         
         for (int i = 0; i < 14; i++) {team1.addScore();}
         for (int i = 0; i < 8; i++) {team2.addScore();}
-        wedstrijd = new Wedstrijd(team1, team2, new Datum(18, 12, 1967), new Uitslag(team1, team2));
+        wedstrijd = new Wedstrijd(team1, team2, new Datum(18, 12, 1967));
     }
 
     /**

@@ -12,20 +12,18 @@ public class Wedstrijd {
     private Team team1;
     private Team team2;
     private Datum datum;
-    private Uitslag uitslag;
     
     //Constructor
-    public Wedstrijd(Team team1, Team team2, Datum datum, Uitslag uitslag) {
+    public Wedstrijd(Team team1, Team team2, Datum datum) {
         this.team1 = team1;
         this.team2 = team2;
         this.datum = datum;
-        this.uitslag = uitslag;
     }
     
     //******************** methods ********************//
     public void print() {
         System.out.println("Wedstrijd van "+datum+":");
-        System.out.println(team1+" "+uitslag+" "+team2);
+        System.out.println(team1+" "+getUitslag()+" "+team2);
         System.out.println("--------------------------------------------");
     }
     
@@ -36,16 +34,16 @@ public class Wedstrijd {
         return datum.toString();
     }
     public String getUitslag() {
-        return uitslag.toString();
+        return String.format("%02d - %02d", team1.getScore(), team2.getScore());
     }
     
     public void setDatum(Datum datum) {
         this.datum = datum;
     }
-    public String setUitslag(int score1, int score2) {
+    public void setUitslag(int score1, int score2) {
     	team1.setScore(score1);
     	team2.setScore(score2);
-        return uitslag.toString();
+        getUitslag();
     }
     //*************************************************//
     
