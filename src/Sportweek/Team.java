@@ -1,4 +1,5 @@
 package Sportweek;
+
 /**
  * Write a description of class Team here.
  * 
@@ -34,6 +35,11 @@ public class Team {
     
     public int getScore() {
         return score;
+    }
+    
+    public int setScore(int score) {
+    	this.score = score;
+    	return score;
     }
     
     public int addScore() {

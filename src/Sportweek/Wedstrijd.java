@@ -42,6 +42,11 @@ public class Wedstrijd {
     public void setDatum(Datum datum) {
         this.datum = datum;
     }
+    public String setUitslag(int score1, int score2) {
+    	team1.setScore(score1);
+    	team2.setScore(score2);
+        return uitslag.toString();
+    }
     //*************************************************//
     
 }
